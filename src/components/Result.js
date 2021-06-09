@@ -1,14 +1,11 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
+import classes from './Result.module.css';
 
-function Result({ data, metal, onClick }) {
+function Result({ data, metal }) {
   return (
-    <Jumbotron onClick={onClick}>
-      <Container>
-        The price of {metal} is ${(data / 31).toFixed(2)} a gram.
-      </Container>
-    </Jumbotron>
+    <div className={classes.result}>
+      The price of {metal} is ${(data / 31).toFixed(2)} a gram.
+    </div>
   );
 }
 

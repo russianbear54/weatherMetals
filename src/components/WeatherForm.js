@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import classes from './WeatherForm.module.css';
 
 const KEY = 'a7d617b1c2d84d80a2a204315212204';
 const WeatherForm = () => {
@@ -30,16 +31,8 @@ const WeatherForm = () => {
     setGotWeather(false);
   };
 
-  const dispStyles = {
-    backgroundImage: 'url("https://static.sciencelearn.org.nz/images/images/000/003/176/full/FIR_ITV_RuralFireRisk_Weather_CloudySky_123RF_901534.jpg?1522314128")',
-    backgroundRepeat: 'no-repeat',
-    height: 1000,
-    width: 1000,
-    margin: 5,
-  };
-
   return (
-    <div style={dispStyles}>
+    <div className={classes.main}>
       <form onSubmit={submitHandler}>
         <label>
           Check Weather

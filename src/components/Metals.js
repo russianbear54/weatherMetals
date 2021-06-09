@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import Result from './Result';
+import classes from './Metals.module.css';
 
 const Metals = () => {
   const [data, setData] = useState(null);
@@ -31,25 +31,24 @@ const Metals = () => {
   };
 
   return (
-    <div style={{ backgroundImage: 'url("https://www.etftrends.com/wp-content/uploads/2020/08/Precious-Metals-ETFs-Slump-As-Investors-Dump-Gold-And-Silver.jpg")', backgroundRepeat: 'no-repeat', height: 800, width: 800 }}>
-      <Container>
-        <Button
-          variant="warning"
-          onClick={() => {
-            getMetalsDataFromAPI('XAU');
-          }}
-        >
-          Gold Price
-        </Button>
-        <Button
-          variant="secondary"
-          onClick={() => {
-            getMetalsDataFromAPI('XAG');
-          }}
-        >
-          Silver Price
-        </Button>
-      </Container>
+    <div className={classes.main}>
+      <Button
+        variant="warning"
+        onClick={() => {
+          getMetalsDataFromAPI('XAU');
+        }}
+      >
+        Gold Price
+      </Button>
+      <Button
+        variant="secondary"
+        onClick={() => {
+          getMetalsDataFromAPI('XAG');
+        }}
+      >
+        Silver Price
+      </Button>
+
       {data && <Result metal={metal} data={data} onClick={hideResult} />}
     </div>
   );
