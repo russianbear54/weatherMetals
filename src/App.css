@@ -1,4 +1,7 @@
 .App {
+  margin: 1rem;
   text-align: center;
   background-size: 50% 50%;
+  display: flex;
+  justify-content: space-around;
 }

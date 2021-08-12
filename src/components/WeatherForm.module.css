@@ -1,8 +1,18 @@
 .main {
   background: url('https://static.sciencelearn.org.nz/images/images/000/003/176/full/FIR_ITV_RuralFireRisk_Weather_CloudySky_123RF_901534.jpg?1522314128');
+  background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  background-position-x: center;
   width: auto;
-  height: 100rem;
-  left: 150px;
+  height: 65rem;
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  position: relative;
+  /* margin: auto; */
+  top: 50px;
+  left: 250px;
 }

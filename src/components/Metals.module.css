@@ -1,7 +1,18 @@
 .main {
   background-image: url('https://www.etftrends.com/wp-content/uploads/2020/08/Precious-Metals-ETFs-Slump-As-Investors-Dump-Gold-And-Silver.jpg');
+  background-size: contain;
   background-repeat: no-repeat;
-  width: 95%;
-  height: 100rem;
-  left: 250px;
+  background-position-x: center;
+  width: auto;
+  height: 65rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+
+.buttons {
+  position: relative;
+  margin: auto;
 }

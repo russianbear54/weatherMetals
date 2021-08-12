@@ -1,4 +1,30 @@
 .result {
-  color: rgb(26, 192, 115);
-  font-size: 5rem5px;
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 5px dashed pink;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  background-position-x: center;
+}
+
+.content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  border-radius: 25px;
+  text-align: center;
+  /* align-self: center; */
+}
+
+.h1 {
+  color: rgb(231, 241, 221);
+  align-self: center;
+  margin: auto;
+  /* padding: 20px; */
 }

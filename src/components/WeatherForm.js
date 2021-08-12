@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import classes from './WeatherForm.module.css';
+import Result from './Result';
 
 const KEY = 'a7d617b1c2d84d80a2a204315212204';
 const WeatherForm = () => {
@@ -33,14 +34,14 @@ const WeatherForm = () => {
 
   return (
     <div className={classes.main}>
-      <form onSubmit={submitHandler}>
+      <form className={classes.form} onSubmit={submitHandler}>
         <label>
           Check Weather
-          <input type="text" name="weatherlocation" placeholder="Enter City or Zip Code" ref={areaInputRef} />
+          <input type='text' name='weatherlocation' placeholder='Enter City or Zip Code' ref={areaInputRef} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type='submit' value='Submit' />
       </form>
-      {gotWeather && <div onClick={tapHandler}>{`The temperature in ${location} is ${temperature} F`}</div>}
+      {gotWeather && <Result location={location} temperature={temperature} onClick={tapHandler} />}
     </div>
   );
 };

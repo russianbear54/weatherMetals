@@ -18,11 +18,11 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <Button variant="dark" onClick={weatherPick}>
+      <div className='App'>
+        <Button variant='dark' size='lg' active onClick={weatherPick}>
           Check Weather
         </Button>
-        <Button variant="light" onClick={metalsPick}>
+        <Button variant='light' size='lg' active onClick={metalsPick}>
           Check Metals
         </Button>
       </div>

@@ -28,27 +28,29 @@ const Metals = () => {
 
   const hideResult = () => {
     setData(null);
+    setMetal(null);
   };
 
   return (
     <div className={classes.main}>
-      <Button
-        variant="warning"
-        onClick={() => {
-          getMetalsDataFromAPI('XAU');
-        }}
-      >
-        Gold Price
-      </Button>
-      <Button
-        variant="secondary"
-        onClick={() => {
-          getMetalsDataFromAPI('XAG');
-        }}
-      >
-        Silver Price
-      </Button>
-
+      <div className={classes.buttons}>
+        <Button
+          variant='warning'
+          onClick={() => {
+            getMetalsDataFromAPI('XAU');
+          }}
+        >
+          Gold Price
+        </Button>
+        <Button
+          variant='secondary'
+          onClick={() => {
+            getMetalsDataFromAPI('XAG');
+          }}
+        >
+          Silver Price
+        </Button>
+      </div>
       {data && <Result metal={metal} data={data} onClick={hideResult} />}
     </div>
   );
